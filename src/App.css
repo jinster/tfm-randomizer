@@ -32,13 +32,13 @@
 
 .App-button button {
   background-color: #4CAF50;
-  padding: 15px 32px;
+  padding: 25px 42px;
   text-decoration: none;
   color: #FFF;
 }
 
 li {
-  margin: 25px;
+  margin: 15px;
 }
 
 @keyframes App-logo-spin {

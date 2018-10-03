@@ -45,12 +45,12 @@ function MainMenu(props) {
   else if (props.whichScreen === 'randomizeScreen') {
     return (
       <div>
-          <h1>Awards</h1>
+          <h2>Awards</h2>
           {awards.map(function(d, idx){
          return (<li key={idx}>{d.name}<br/>{d.description}</li>)
        })}
-          <br/><br/>
-          <h1>Milestones</h1>
+          <br/>
+          <h2>Milestones</h2>
           {milestones.map(function(d, idx){
          return (<li key={idx}>{d.name}<br/>{d.description}<br/></li>)
        })}
