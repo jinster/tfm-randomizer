@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/tfm-milestones-awards-randomizer/static/js/runtime~main.27de2ed8.js"
   },
   {
-    "revision": "c7021094007bd6f5666d",
-    "url": "/tfm-milestones-awards-randomizer/static/js/main.c7021094.chunk.js"
+    "revision": "cb3287defe1221efba58",
+    "url": "/tfm-milestones-awards-randomizer/static/js/main.cb3287de.chunk.js"
   },
   {
     "revision": "709840df12e4494d4644",
     "url": "/tfm-milestones-awards-randomizer/static/js/1.709840df.chunk.js"
   },
   {
-    "revision": "c7021094007bd6f5666d",
-    "url": "/tfm-milestones-awards-randomizer/static/css/main.51ffe74d.chunk.css"
+    "revision": "cb3287defe1221efba58",
+    "url": "/tfm-milestones-awards-randomizer/static/css/main.f28a795d.chunk.css"
   },
   {
-    "revision": "9714f7dc3f9f1edab549283e309b43d5",
+    "revision": "acb170614d95d772cba790939e60bea6",
     "url": "/tfm-milestones-awards-randomizer/index.html"
   }
 ];
