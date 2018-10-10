@@ -21,9 +21,13 @@ function shuffle(array) {
   return array;
 }
 
+function check() {
+  return (document.getElementById("includeVenus").checked);
+}
+
 function MainMenu(props) {
-  const milestones = shuffle(data.milestones).slice(0, 5);
-  const awards = shuffle(data.awards).slice(0, 5);
+  var milestones = [];
+  var awards = []
   if (props.whichScreen === 'mainMenu') {
     return (
       <div className="App-main-menu">
@@ -37,24 +41,44 @@ function MainMenu(props) {
         </div>
 
         <div className="App-button">
-          <button onClick={props.buttonClick}>Randomize!</button>
+          <div className="wrapper">
+            <p>Include Venus Next?</p>
+            <label class="switch">
+              <input id="includeVenus" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div className="wrapper">
+            <button onClick={props.buttonClick}>Randomize!</button>
+          </div>
         </div>
       </div>
     );
   }
   else if (props.whichScreen === 'randomizeScreen') {
+    if (!check()) {
+      milestones = shuffle(data.milestones).filter(e => e.isVenus == null).slice(0, 5);
+      awards = shuffle(data.awards).filter(e => e.isVenus == null).slice(0, 5);
+    }
+    else {
+      milestones = shuffle(data.milestones).slice(0, 6);
+      awards = shuffle(data.awards).slice(0, 6);
+    }
     return (
-      <div>
-          <h2>Awards</h2>
-          {awards.map(function(d, idx){
-         return (<li key={idx}>{d.name}<br/>{d.description}</li>)
-       })}
-          <br/>
-          <h2>Milestones</h2>
+      <div className="randomize-screen">
+        <h2>Milestones</h2>
+        <div className="am-list">
           {milestones.map(function(d, idx){
-         return (<li key={idx}>{d.name}<br/>{d.description}<br/></li>)
-       })}
+          return (<div className="award-milestone"><p className="title">{d.name}</p><div className="description">{d.description}</div></div>)
+          })}
         </div>
+        <h2>Awards</h2>
+        <div className="am-list">
+          {awards.map(function(d, idx){
+          return (<div className="award-milestone"><p className="title">{d.name}</p><div className="description">{d.description}</div></div>)
+          })} 
+        </div>         
+      </div>
     );
   }
   else return(null);
@@ -64,12 +88,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentScreen: 'mainMenu',
-      selectedAwards: [],
-      selectedMilestones: [],
-      awardsFunded: [],
-      milestonesReached: [],
-      options: []
+      currentScreen: 'mainMenu'
     }
   }
 
