@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/tfm-milestones-awards-randomizer/precache-manifest.efcf4d5f637f74199ff060122501dd07.js"
+  "/tfm-milestones-awards-randomizer/precache-manifest.a060e66d395a32b91fa7eb9336e99bde.js"
 );
 
 workbox.clientsClaim();
