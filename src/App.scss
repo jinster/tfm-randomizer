@@ -5,6 +5,10 @@ html {
     ),url("https://jinster.github.io/tfm-milestones-awards-randomizer/mars.jpg");
   object-fit: cover;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -116,17 +120,25 @@ input:checked + .slider:before {
 
 .award-milestone {
   box-sizing: border-box;
+  display: flex;
   border: 1px white solid;
   width: 33vw;
   height: 16.5vh;
   margin-bottom: 5px;
   justify-content: center;
   align-items: center;
-  font-family: Monaco, Mono_space;
+  h3 {
+    font-size: 14px;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
 }
 
 .award-milestone-secondary {
-  @extend .award-milestone
+  @extend .award-milestone;
+  display: block;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .am-list {
@@ -135,9 +147,10 @@ input:checked + .slider:before {
   justify-content: space-between;
 }
 
+
 .description {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   padding: 0 2px;
 }
 
@@ -153,8 +166,11 @@ input:checked + .slider:before {
 @media (min-width: 360px) {
   .award-milestone {
     margin-bottom: 10px;
+    h3 {
+      font-size: 18px;
+    }
   }
   .description{
-    font-size: 12px;
+    font-size: 14px;
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import AwardMilestone from './components/AwardMilestone';
 import data from './data.json';
 
 function shuffle(array) {
@@ -43,9 +44,9 @@ function MainMenu(props) {
         <div className="App-button">
           <div className="wrapper">
             <p>Include Venus Next?</p>
-            <label class="switch">
+            <label className="switch">
               <input id="includeVenus" type="checkbox" />
-              <span class="slider"></span>
+              <span className="slider"></span>
             </label>
           </div>
           <div className="wrapper">
@@ -69,13 +70,33 @@ function MainMenu(props) {
         <h2>Milestones</h2>
         <div className="am-list">
           {milestones.map(function(d, idx){
-          return (<div className="award-milestone"><p className="title">{d.name}</p><div className="description">{d.description}</div></div>)
-          })}
+            const style = {
+              "background": d.backgroundColor
+            }
+            return (
+              <AwardMilestone 
+                name={d.name}
+                description={d.description}
+                style={style}
+                key={idx}
+              />
+            )
+          })} 
         </div>
         <h2>Awards</h2>
         <div className="am-list">
           {awards.map(function(d, idx){
-          return (<div className="award-milestone"><p className="title">{d.name}</p><div className="description">{d.description}</div></div>)
+          const style = {
+              "background": d.backgroundColor
+          }
+          return (
+            <AwardMilestone 
+                name={d.name}
+                description={d.description}
+                style={style}
+                key={idx+999}
+              />
+          )
           })} 
         </div>         
       </div>
