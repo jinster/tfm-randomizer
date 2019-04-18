@@ -1,7 +1,7 @@
 {
   "name": "tfm-milestones-awards-randomizer",
   "version": "0.1.0",
-  "homepage": "http://jinster.github.io/tfm-randomizer",
+  "homepage": "https://jinster.github.io/tfm-randomizer/",
   "private": true,
   "dependencies": {
     "node-sass": "^4.11.0",
@@ -24,7 +24,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.0",
+    "gh-pages": "^2.0.1",
     "gift": "^0.10.2"
   }
 }

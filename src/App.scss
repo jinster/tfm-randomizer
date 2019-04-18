@@ -2,7 +2,7 @@ html {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)
-    ),url("https://jinster.github.io/tfm-milestones-awards-randomizer/mars.jpg");
+    ),url("https://jinster.github.io/tfm-randomizer/mars.jpg");
   object-fit: cover;
 }
 
@@ -127,6 +127,8 @@ input:checked + .slider:before {
   margin-bottom: 5px;
   justify-content: center;
   align-items: center;
+  backface-visibility: visible;
+  transform: translate3d(0, 0, 1px);
   h3 {
     font-size: 14px;
     color: white;
