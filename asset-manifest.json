@@ -1,13 +1,13 @@
 {
-  "main.css": "/tfm-milestones-awards-randomizer/static/css/main.e199e3df.chunk.css",
-  "main.js": "/tfm-milestones-awards-randomizer/static/js/main.d2c77ce3.chunk.js",
-  "main.js.map": "/tfm-milestones-awards-randomizer/static/js/main.d2c77ce3.chunk.js.map",
-  "static/js/1.1569fd39.chunk.js": "/tfm-milestones-awards-randomizer/static/js/1.1569fd39.chunk.js",
-  "static/js/1.1569fd39.chunk.js.map": "/tfm-milestones-awards-randomizer/static/js/1.1569fd39.chunk.js.map",
-  "runtime~main.js": "/tfm-milestones-awards-randomizer/static/js/runtime~main.27de2ed8.js",
-  "runtime~main.js.map": "/tfm-milestones-awards-randomizer/static/js/runtime~main.27de2ed8.js.map",
-  "static/css/main.e199e3df.chunk.css.map": "/tfm-milestones-awards-randomizer/static/css/main.e199e3df.chunk.css.map",
-  "index.html": "/tfm-milestones-awards-randomizer/index.html",
-  "precache-manifest.a060e66d395a32b91fa7eb9336e99bde.js": "/tfm-milestones-awards-randomizer/precache-manifest.a060e66d395a32b91fa7eb9336e99bde.js",
-  "service-worker.js": "/tfm-milestones-awards-randomizer/service-worker.js"
+  "main.css": "/tfm-randomizer/static/css/main.0056ea8d.chunk.css",
+  "main.js": "/tfm-randomizer/static/js/main.07b4fc3a.chunk.js",
+  "main.js.map": "/tfm-randomizer/static/js/main.07b4fc3a.chunk.js.map",
+  "runtime~main.js": "/tfm-randomizer/static/js/runtime~main.092d6da5.js",
+  "runtime~main.js.map": "/tfm-randomizer/static/js/runtime~main.092d6da5.js.map",
+  "static/js/2.97807068.chunk.js": "/tfm-randomizer/static/js/2.97807068.chunk.js",
+  "static/js/2.97807068.chunk.js.map": "/tfm-randomizer/static/js/2.97807068.chunk.js.map",
+  "index.html": "/tfm-randomizer/index.html",
+  "precache-manifest.bd11a155b02b6470b454ef5134d35f5b.js": "/tfm-randomizer/precache-manifest.bd11a155b02b6470b454ef5134d35f5b.js",
+  "service-worker.js": "/tfm-randomizer/service-worker.js",
+  "static/css/main.0056ea8d.chunk.css.map": "/tfm-randomizer/static/css/main.0056ea8d.chunk.css.map"
 }
