@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "d648928401a19b01e9b8",
-    "url": "/tfm-randomizer/static/css/main.d26d1f62.chunk.css"
+    "revision": "a28e73da540c4442e524",
+    "url": "/tfm-randomizer/static/css/main.e9a6cf81.chunk.css"
   },
   {
-    "revision": "d648928401a19b01e9b8",
+    "revision": "a28e73da540c4442e524",
     "url": "/tfm-randomizer/static/js/main.07b4fc3a.chunk.js"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/tfm-randomizer/static/js/2.97807068.chunk.js"
   },
   {
-    "revision": "da356e369ba68eb7acba7175a7145a16",
+    "revision": "4b1f3ba9095bb56783ba2517fa31f97f",
     "url": "/tfm-randomizer/index.html"
   }
 ];
