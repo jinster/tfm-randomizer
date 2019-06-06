@@ -3,7 +3,7 @@ html {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)
     ),url("https://jinster.github.io/tfm-randomizer/mars.jpg");
-  object-fit: cover;
+  object-fit: fill;
 }
 
 body {
@@ -123,7 +123,7 @@ input:checked + .slider:before {
   display: flex;
   border: 1px white solid;
   width: 33vw;
-  height: 16.5vh;
+  height: 18vh;
   margin-bottom: 5px;
   justify-content: center;
   align-items: center;
@@ -169,10 +169,13 @@ input:checked + .slider:before {
   .award-milestone {
     margin-bottom: 10px;
     h3 {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
+  .title {
+    font-size: 18px;
+  }
   .description{
-    font-size: 14px;
+    font-size: 16px;
   }
 }
