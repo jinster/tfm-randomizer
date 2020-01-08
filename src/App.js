@@ -3,51 +3,6 @@ import './App.scss';
 import AwardMilestone from './components/AwardMilestone';
 import data from './data.json';
 
-let NAMES = ["TERRAFORMER", "MAYOR", "GARDENER", "BUILDER", "PLANNER",
-         "GENERALIST", "SPECIALIST", "ECOLOGIST", "TYCOON", "LEGEND",
-         "DIVERSIFIER", "TACTICIAN", "POLAR EXPLORER", "ENERGIZER", "RIM SETTLER",
-         "HOVERLORD",
-         "LANDLORD", "SCIENTIST", "BANKER", "THERMALIST", "MINER",
-         "CELEBRITY", "INDUSTRIALIST", "DESERT SETTLER", "ESTATE DEALER", "BENEFACTOR",
-         "CULTIVATOR", "MAGNATE", "SPACE BARON", "EXCENTRIC", "CONTRACTOR",
-         "VENUPHILE"]
-
-let SYNERGIES = [
-   ["",0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,  1,0,0,1,0,0,0,1,1,9,2,0,0,0,0,0],
-   [0,"",3,0,0,0,0,0,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,4,0,6,0,0,0,0,0],
-   [0,0,"",0,0,0,0,1,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,5,2,9,0,0,0,0,0],
-   [0,0,0,"",0,0,0,0,4,0,0,0,0,0,0,0,  0,0,0,0,1,0,1,0,0,0,0,5,0,0,9,0],
-   [0,0,0,0,"",0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,"",0,0,0,0,0,0,0,0,0,0,  0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,"",0,0,0,0,0,0,4,0,0,  0,0,2,1,1,0,1,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,"",2,0,2,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,1,1,0,4,0,0],
-   [0,0,0,0,0,0,0,0,"",0,1,1,0,0,1,0,  0,2,0,0,0,0,0,0,0,0,0,5,1,3,2,2],
-   [0,0,0,0,0,0,0,0,0,"",0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,0,  4,0,0,0,0,0,0,5,2,0,3,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,  0,0,0,3,0,0,6,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,  0,0,0,0,0,2,0,0,0,0,0,1,3,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",  0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5],
-
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  "",0,0,0,0,0,0,7,7,0,8,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,"",0,0,0,0,0,0,0,0,0,2,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,"",0,0,0,0,0,0,1,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,"",0,0,0,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,"",0,7,0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,"",0,0,0,0,0,1,3,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,"",0,0,0,0,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,"",5,1,7,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,"",1,8,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,"",3,0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,"",2,0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,2],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",0],
-   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,""]
- ];
-
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -95,6 +50,13 @@ function MainMenu(props) {
             </label>
           </div>
           <div className="wrapper">
+            <p>Prevent high conflict synergies?</p>
+            <label className="switch">
+              <input id="preventSynergies" type="checkbox" checked/>
+              <span className="slider"></span>
+            </label>
+          </div>
+          <div className="wrapper">
             <button onClick={props.buttonClick}>Randomize!</button>
           </div>
         </div>
@@ -119,14 +81,14 @@ function MainMenu(props) {
               "background": d.backgroundColor
             }
             return (
-              <AwardMilestone 
+              <AwardMilestone
                 name={d.name}
                 description={d.description}
                 style={style}
                 key={idx}
               />
             )
-          })} 
+          })}
         </div>
         <h2>Awards</h2>
         <div className="am-list">
@@ -135,15 +97,15 @@ function MainMenu(props) {
               "background": d.backgroundColor
           }
           return (
-            <AwardMilestone 
+            <AwardMilestone
                 name={d.name}
                 description={d.description}
                 style={style}
                 key={idx+999}
               />
           )
-          })} 
-        </div>         
+          })}
+        </div>
       </div>
     );
   }
@@ -164,13 +126,13 @@ class App extends Component {
       currentScreen: 'randomizeScreen'
     });
   }
-    
+
   render() {
     const screen = this.state.currentScreen;
     return (
       <div className="App">
-        <MainMenu 
-          whichScreen={screen} 
+        <MainMenu
+          whichScreen={screen}
           buttonClick={this.randomizeButton}
         />
       </div>

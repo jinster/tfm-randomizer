@@ -1,169 +1,59 @@
 {
-  "milestones": [
-    {
-      "name": "Builder",
-      "description": "8 building tags in play",
-      "backgroundColor": "#865402"
-    },
-    {
-      "name": "Diversifier",
-      "description": "8 different tags in play",
-      "backgroundColor": "linear-gradient(to left, brown, gray, blue, black, yellow, green, violet, white)"
-    },
-    {
-      "name": "Ecologist",
-      "description": "4 plant/ animal/ microbe tags in play",
-      "backgroundColor": "#008036"
-    },
-    {
-      "name": "Energizer",
-      "description": "6 Energy production",
-      "backgroundColor": "#8100b1"
-    },
-    {
-      "name": "Gardener",
-      "description": "3 Greenery tiles",
-      "backgroundColor": "#33d603"
-    },
-    {
-      "name": "Generalist",
-      "description": "All six production values are +1",
-      "backgroundColor": "linear-gradient(to right, yellow, brown, black, green, violet, orange)"
-    },
-    {
-      "name": "Hoverlord",
-      "description": "7 Floater resources on cards",
-      "isVenus": true,
-      "backgroundColor": "yellow"
-    },
-    {
-      "name": "Legend",
-      "description": "5 events (red cards) played",
-      "backgroundColor": "red"
-    },
-    {
-      "name": "Mayor",
-      "description": "3 City tiles",
-      "backgroundColor": "lightgray"
-    },
-    {
-      "name": "Planner",
-      "description": "16 cards in hand",
-      "backgroundColor": "black"
-    },
-    {
-      "name": "Polar Explorer",
-      "description": "3 tiles in bottom 2 rows",
-      "backgroundColor": "linear-gradient(orange, white)"
-    },
-    {
-      "name": "Rim Settler",
-      "description": "3 Jovian tags",
-      "backgroundColor": "#eaa241"
-    },
-    {
-      "name": "Specialist",
-      "description": "One production is at +10",
-      "backgroundColor": "#98866e"
-    },
-    {
-      "name": "Tactician",
-      "description": "5 cards with requirements in play",
-      "backgroundColor": "#d4dc01"
-    },
-    {
-      "name": "Terraformer",
-      "description": "Terraforming Rating of 35",
-      "backgroundColor": "orange"
-    },
-    {
-      "name": "Tycoon",
-      "description": "15 blue/green cards in play",
-      "backgroundColor": "linear-gradient(blue, green)"
-    }
+  "names": [
+    "TERRAFORMER", "MAYOR", "GARDENER", "BUILDER", "PLANNER",
+    "GENERALIST", "SPECIALIST", "ECOLOGIST", "TYCOON", "LEGEND",
+    "DIVERSIFIER", "TACTICIAN", "POLAR EXPLORER", "ENERGIZER", "RIM SETTLER",
+    "HOVERLORD",
+    "LANDLORD", "SCIENTIST", "BANKER", "THERMALIST", "MINER",
+    "CELEBRITY", "INDUSTRIALIST", "DESERT SETTLER", "ESTATE DEALER", "BENEFACTOR",
+    "CULTIVATOR", "MAGNATE", "SPACE BARON", "EXCENTRIC", "CONTRACTOR",
+    "VENUPHILE"
   ],
 
-  "awards": [
-    {
-      "name": "Banker",
-      "description": "Highest M€ production",
-      "backgroundColor": "#BBBB00"
-    },
-    {
-      "name": "Benefactor",
-      "description": "Highest Terraforming rating (count this first)",
-      "backgroundColor": "orange"
-    },
-    {
-      "name": "Celebrity",
-      "description": "Most 20+ M€ cost cards in play (non-red)",
-      "backgroundColor": "#f5f500"
-    },
-    {
-      "name": "Contractor",
-      "description": "Most Building tags in play",
-      "backgroundColor": "#865402"
-    },
-    {
-      "name": "Cultivator",
-      "description": "Most Greenery tiles",
-      "backgroundColor": "green"
-    },
-    {
-      "name": "Desert Settler",
-      "description": "Most tiles in bottom 4 rows",
-      "backgroundColor": "linear-gradient(orange, lightgray)"
-    },
-    {
-      "name": "Estate Dealer",
-      "description": "Most tiles adjacent to Ocean tiles",
-      "backgroundColor": "linear-gradient(blue, white)"
-    },
-    {
-      "name": "Excentric",
-      "description": "Most resources on cards",
-      "backgroundColor": "black"
-    },
-    {
-      "name": "Industrialist",
-      "description": "Most Steel and Energy resources",
-      "backgroundColor": "linear-gradient(to right, #865402, violet)"
-    },
-    {
-      "name": "Landlord",
-      "description": "Most tiles in play",
-      "backgroundColor": "lightgray"
-    },
-    {
-      "name": "Magnate",
-      "description": "Most green cards in play",
-      "backgroundColor": "green"
-    },
-    {
-      "name": "Miner",
-      "description": "Most Steel and Titanium resources",
-      "backgroundColor": "linear-gradient(to right, #865402, black)"
-    },
-    {
-      "name": "Scientist",
-      "description": "Most Science tags in play",
-      "backgroundColor": "#CCC"
-    },
-    {
-      "name": "Space Baron",
-      "description": "Most Space tags in play",
-      "backgroundColor": "black"
-    },
-    {
-      "name": "Thermalist",
-      "description": "Most Heat resources",
-      "backgroundColor": "red"
-    },
-    {
-      "name": "Venuphile",
-      "description": "Most Venus tags in play",
-      "isVenus": true,
-      "backgroundColor": "#ecec25"
-    }
+  "description": [
+    "Terraforming Rating of 35", "3 City tiles", "3 Greenery tiles", "8 building tags in play", "16 cards in hand", "All six production values are +1", "One production is at +10", "4 plant/ animal/ microbe tags in play", "15 blue/green cards in play", "5 events (red cards) played", "8 different tags in play", "5 cards with requirements in play", "3 tiles in bottom 2 rows", "6 Energy production", "3 Jovian tags", "7 Floater resources on cards",
+    "Most tiles in play", "Most Science tags in play", "Highest M€ production", "Most Heat resources", "Most Steel and Titanium resources", "Most 20+ M€ cost cards in play (non-red)", "Most Steel and Energy resources", "Most tiles in bottom 4 rows", "Most tiles adjacent to Ocean tiles", "Highest Terraforming rating (count this first)", "Most Greenery tiles", "Most green cards in play", "Most Space tags in play", "Most resources on cards", "Most Building tags in play", "Most Venus tags in play"
+  ],
+
+  "backgroundColor": [
+    "orange", "lightgray", "#33d603", "#865402", "black", "linear-gradient(to right, yellow, brown, black, green, violet, orange)", "#98866e", "#008036", "linear-gradient(blue, green)", "red", "linear-gradient(to left, brown, gray, blue, black, yellow, green, violet, white)", "#d4dc01", "linear-gradient(orange, white)", "#8100b1", "#eaa241", "yellow",
+    "lightgray", "#CCC", "#BBBB00", "red", "linear-gradient(to right, #865402, black)", "#f5f500", "linear-gradient(to right, #865402, violet)", "linear-gradient(orange, lightgray)", "linear-gradient(blue, white)", "orange", "green", "green", "black", "#865402", "#ecec25"
+  ],
+
+  "synergies" : [
+    ["",0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,  1,0,0,1,0,0,0,1,1,9,2,0,0,0,0,0],
+    [0,"",3,0,0,0,0,0,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,4,0,6,0,0,0,0,0],
+    [0,0,"",0,0,0,0,1,0,0,0,0,4,0,0,0,  6,0,0,0,0,0,0,4,5,2,9,0,0,0,0,0],
+    [0,0,0,"",0,0,0,0,4,0,0,0,0,0,0,0,  0,0,0,0,1,0,1,0,0,0,0,5,0,0,9,0],
+    [0,0,0,0,"",0,0,0,0,0,0,0,0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,"",0,0,0,0,0,0,0,0,0,0,  0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,"",0,0,0,0,0,0,4,0,0,  0,0,2,1,1,0,1,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,"",2,0,2,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,1,1,0,4,0,0],
+    [0,0,0,0,0,0,0,0,"",0,1,1,0,0,1,0,  0,2,0,0,0,0,0,0,0,0,0,5,1,3,2,2],
+    [0,0,0,0,0,0,0,0,0,"",0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,  0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,0,  4,0,0,0,0,0,0,5,2,0,3,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,  0,0,0,3,0,0,6,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,  0,0,0,0,0,2,0,0,0,0,0,1,3,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",  0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5],
+
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  "",0,0,0,0,0,0,7,7,0,8,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,"",0,0,0,0,0,0,0,0,0,2,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,"",0,0,0,0,0,0,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,"",0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,"",0,7,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,"",0,0,0,0,0,1,3,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,"",0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,"",5,1,7,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,"",1,8,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,"",3,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,"",0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,"",2,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,"",0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,"",0,2],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,"",0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,""]
   ]
+
 }
