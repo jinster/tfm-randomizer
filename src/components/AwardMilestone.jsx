@@ -17,7 +17,7 @@ class AwardMilestone extends React.Component {
     return (
       <div className="am-item" >
         {this.state.bigTitle
-        ? <div className="award-milestone" style={props.style} onClick={this.onToggle.bind(this)} key={props.idx} ><h3>{props.name}</h3></div> 
+        ? <div className="award-milestone" style={{background: props.style}} onClick={this.onToggle.bind(this)} key={props.idx} ><h3>{props.name}</h3></div> 
         : <div className="award-milestone-secondary" onClick={this.onToggle.bind(this)} key={props.idx + 999}><p className="title">{props.name} </p><div className="description">{props.description}</div>
         </div>
         }

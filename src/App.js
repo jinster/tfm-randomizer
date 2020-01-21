@@ -2,25 +2,63 @@ import React, { Component } from 'react';
 import './App.scss';
 import AwardMilestone from './components/AwardMilestone';
 import data from './data.json';
+import _ from 'lodash';
 
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  var i = array.length,
+      j = 0,
+      temp;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+  while (i--) {
+      j = Math.floor(Math.random() * (i+1));
+      temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
   }
 
   return array;
 }
+
+function findHighestConflictScore(arr) {
+  let newHighScore = 0;
+  _.forEach(arr, function(val1) {
+    _.forEach(arr, function(val2) {
+      if (data.synergies[val1][val2] > newHighScore) {
+        newHighScore = data.synergies[val1][val2];
+      }
+    })
+  })
+  return newHighScore;
+}
+
+function generateMilestonesAndAwards() {
+
+  const milestonesArr = Array(check() ? 16 : 15).fill().map((x,i)=>i);
+  const awardsArr =  Array(check() ? 16 : 15).fill().map((x,i)=>i + 16);
+
+  let highestConflictScore = 99;
+  let array = [];
+
+  while (highestConflictScore >= 5) {
+    array = [];
+    let tempMiles = [...milestonesArr];
+    let tempAwards = [...awardsArr];
+  
+    tempMiles = shuffle(tempMiles).slice(0, check() ? 6 : 5);
+    tempAwards = shuffle(tempAwards).slice(0, check() ? 6 : 5);
+  
+    array = _.concat(tempMiles, tempAwards);
+    array = _.sortBy(array);
+  
+    highestConflictScore = findHighestConflictScore(array);
+  }
+
+  console.log(highestConflictScore);
+  console.log(array);
+  return array;
+}
+
 
 function check() {
   return (document.getElementById("includeVenus").checked);
@@ -64,27 +102,21 @@ function MainMenu(props) {
     );
   }
   else if (props.whichScreen === 'randomizeScreen') {
-    if (!check()) {
-      milestones = shuffle(data.milestones).filter(e => e.isVenus == null).slice(0, 5);
-      awards = shuffle(data.awards).filter(e => e.isVenus == null).slice(0, 5);
-    }
-    else {
-      milestones = shuffle(data.milestones).slice(0, 6);
-      awards = shuffle(data.awards).slice(0, 6);
-    }
+    const array = generateMilestonesAndAwards();
+    const isVenus = check() ? 6 : 5;
     return (
       <div className="randomize-screen">
         <h2>Milestones</h2>
         <div className="am-list">
-          {milestones.map(function(d, idx){
-            const style = {
-              "background": d.backgroundColor
+          {array.map(function(d, idx){
+            if (idx >= isVenus) {
+              return;
             }
             return (
               <AwardMilestone
-                name={d.name}
-                description={d.description}
-                style={style}
+                name={data.names[d]}
+                description={data.description[d]}
+                style={data.backgroundColor[d]}
                 key={idx}
               />
             )
@@ -92,18 +124,18 @@ function MainMenu(props) {
         </div>
         <h2>Awards</h2>
         <div className="am-list">
-          {awards.map(function(d, idx){
-          const style = {
-              "background": d.backgroundColor
-          }
-          return (
-            <AwardMilestone
-                name={d.name}
-                description={d.description}
-                style={style}
-                key={idx+999}
-              />
-          )
+          {array.map(function(d, idx){
+              if (idx < isVenus) {
+                return;
+              }
+              return (
+                <AwardMilestone
+                  name={data.names[d]}
+                  description={data.description[d]}
+                  style={data.backgroundColor[d]}
+                  key={idx}
+                />
+              )
           })}
         </div>
       </div>
