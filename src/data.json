@@ -17,7 +17,7 @@
 
   "backgroundColor": [
     "orange", "lightgray", "#33d603", "#865402", "black", "linear-gradient(to right, yellow, brown, black, green, violet, orange)", "#98866e", "#008036", "linear-gradient(blue, green)", "red", "linear-gradient(to left, brown, gray, blue, black, yellow, green, violet, white)", "#d4dc01", "linear-gradient(orange, white)", "#8100b1", "#eaa241", "yellow",
-    "lightgray", "#CCC", "#BBBB00", "red", "linear-gradient(to right, #865402, black)", "#f5f500", "linear-gradient(to right, #865402, violet)", "linear-gradient(orange, lightgray)", "linear-gradient(blue, white)", "orange", "green", "green", "black", "#865402", "#ecec25"
+    "lightgray", "#CCC", "#BBBB00", "red", "linear-gradient(to right, #865402, black)", "#f5f500", "linear-gradient(to right, #865402, purple)", "linear-gradient(orange, lightgray)", "linear-gradient(blue, white)", "orange", "green", "green", "black", "#865402", "#ecec25"
   ],
 
   "synergies" : [
