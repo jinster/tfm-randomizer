@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tfm-randomizer/precache-manifest.5597fe9a3d643f33fa9d0b9679585416.js"
+  "/tfm-randomizer/precache-manifest.445901d1e1d091c47b0785a85fc1ff86.js"
 );
 
 workbox.clientsClaim();
