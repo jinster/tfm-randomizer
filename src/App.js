@@ -34,8 +34,8 @@ function findHighestConflictScore(arr) {
 
 function generateMilestonesAndAwards() {
 
-  const milestonesArr = Array(check() ? 16 : 15).fill().map((x,i)=>i);
-  const awardsArr =  Array(check() ? 16 : 15).fill().map((x,i)=>i + 16);
+  const milestonesArr = Array(checkVenus() ? 16 : 15).fill().map((x,i)=>i);
+  const awardsArr =  Array(checkVenus() ? 16 : 15).fill().map((x,i)=>i + 16);
 
   let highestConflictScore = 99;
   let array = [];
@@ -45,28 +45,32 @@ function generateMilestonesAndAwards() {
     let tempMiles = [...milestonesArr];
     let tempAwards = [...awardsArr];
   
-    tempMiles = shuffle(tempMiles).slice(0, check() ? 6 : 5);
-    tempAwards = shuffle(tempAwards).slice(0, check() ? 6 : 5);
+    tempMiles = shuffle(tempMiles).slice(0, checkVenus() ? 6 : 5);
+    tempAwards = shuffle(tempAwards).slice(0, checkVenus() ? 6 : 5);
   
     array = _.concat(tempMiles, tempAwards);
     array = _.sortBy(array);
   
     highestConflictScore = findHighestConflictScore(array);
+    console.log(highestConflictScore);
+    if (!checkSynergyOpt()) {
+      break;
+    }
   }
 
-  console.log(highestConflictScore);
-  console.log(array);
   return array;
 }
 
 
-function check() {
+function checkVenus() {
   return (document.getElementById("includeVenus").checked);
 }
 
+function checkSynergyOpt() {
+  return (document.getElementById("preventSynergies").checked);
+}
+
 function MainMenu(props) {
-  var milestones = [];
-  var awards = []
   if (props.whichScreen === 'mainMenu') {
     return (
       <div className="App-main-menu">
@@ -90,12 +94,12 @@ function MainMenu(props) {
           <div className="wrapper">
             <p>Prevent high conflict synergies?</p>
             <label className="switch">
-              <input id="preventSynergies" type="checkbox" checked/>
+              <input id="preventSynergies" type="checkbox" defaultChecked={true}/>
               <span className="slider"></span>
             </label>
           </div>
           <div className="wrapper">
-            <button onClick={props.buttonClick}>Randomize!</button>
+            <button className="randomize-btn" onClick={props.buttonClick}>Randomize!</button>
           </div>
         </div>
       </div>
@@ -103,14 +107,14 @@ function MainMenu(props) {
   }
   else if (props.whichScreen === 'randomizeScreen') {
     const array = generateMilestonesAndAwards();
-    const isVenus = check() ? 6 : 5;
+    const isVenus = checkVenus() ? 6 : 5;
     return (
       <div className="randomize-screen">
         <h2>Milestones</h2>
         <div className="am-list">
           {array.map(function(d, idx){
             if (idx >= isVenus) {
-              return;
+              return null;
             }
             return (
               <AwardMilestone
@@ -126,7 +130,7 @@ function MainMenu(props) {
         <div className="am-list">
           {array.map(function(d, idx){
               if (idx < isVenus) {
-                return;
+                return null;
               }
               return (
                 <AwardMilestone
@@ -153,7 +157,6 @@ class App extends Component {
   }
 
   randomizeButton = () => {
-
     this.setState({
       currentScreen: 'randomizeScreen'
     });

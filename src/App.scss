@@ -1,16 +1,15 @@
-html {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)
-    ),url("https://jinster.github.io/tfm-randomizer/mars.jpg");
-  object-fit: fill;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
 }
 .App {
   text-align: center;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ),url("https://jinster.github.io/tfm-randomizer/mars.jpg");
+object-fit: fill;
+background-size: cover;
+height: 100vh;
 }
 
 p {
@@ -40,7 +39,7 @@ p {
 .App-button {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20vh;
+  margin-top: 10vh;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -51,11 +50,13 @@ p {
   width: 100%;
 }
 
-.App-button button {
+.randomize-btn {
   background-color: #4CAF50;
   padding: 25px 42px;
   text-decoration: none;
   color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 li {
@@ -140,7 +141,7 @@ input:checked + .slider:before {
   @extend .award-milestone;
   display: block;
   color: white;
-  mix-blend-mode: difference;
+  background: #000;
 }
 
 .am-list {
@@ -169,7 +170,7 @@ input:checked + .slider:before {
   .award-milestone {
     margin-bottom: 10px;
     h3 {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   .title {
@@ -177,5 +178,6 @@ input:checked + .slider:before {
   }
   .description{
     font-size: 16px;
+    line-height: 16px;
   }
 }
