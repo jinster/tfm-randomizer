@@ -166,6 +166,7 @@ class App extends Component {
     const screen = this.state.currentScreen;
     return (
       <div className="App">
+        <div className="background"></div>
         <MainMenu
           whichScreen={screen}
           buttonClick={this.randomizeButton}
