@@ -1,6 +1,6 @@
 {
   "name": "tfm-milestones-awards-randomizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://jinster.github.io/tfm-randomizer/",
   "private": true,
   "dependencies": {
