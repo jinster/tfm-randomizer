@@ -3,7 +3,6 @@ import './App.scss';
 import AwardMilestone from './components/AwardMilestone';
 import data from './data.json';
 import _ from 'lodash';
-import { Tooltip } from 'rtmg-component-library';
 
 function shuffle(array) {
   var i = array.length,
